@@ -80,6 +80,12 @@
       }
 
       if (this.hash == '#header') {
+        if(window.screen.width <= 768){
+          header.querySelector(`img[class="intro_mobile"]`).style.display = "block"
+        } else {
+          header.querySelector(".intro_mobile").style.display = "none"
+        }
+        header.querySelector('a').style.color = "white";
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')
@@ -88,7 +94,10 @@
       }
 
       if (!header.classList.contains('header-top')) {
-        header.classList.add('header-top')
+        header.classList.add('header-top');
+
+        header.querySelector(`img[class="intro_mobile"]`).style.display = "none"
+        header.querySelector('a').style.color = "#18d26e";
         setTimeout(function() {
           sections.forEach((item) => {
             item.classList.remove('section-show')

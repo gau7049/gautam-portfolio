@@ -40,11 +40,18 @@
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-      <script src="sample.js"></script>
-      <h1><a href="index.html">Gautam Paliwal</a></h1>
+      <h1>
+        <img class="intro_mobile" src="./assets/img/web-developer-digital-avatar-generative-ai_934475-9048.avif" />
+
+        <a href="index.html">Gautam Paliwal</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <span>Full Stack Engineer</span> and <span>Problem Solver</span></h2>
+      <div class="intro_desktop">  
+        <h2>I'm a passionate <span class="auto-typing_d"></span></h2>
+      </div>
+      <div class="intro_mobile">  
+        <h2> I'm a passionate <br> <span class="auto-typing_m"></span></h2>
+      </div>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -65,6 +72,7 @@
       </div>
 
     </div>
+
 
   </header>
   <!-- End Header -->
@@ -159,7 +167,7 @@
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <img src="assets/img/icons/node-js.png" width="30px" style="margin-right:10px" />
-            <h3>Node JS</h3>
+            <h3>Node.js</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
@@ -183,7 +191,31 @@
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <img src="assets/img/icons/typescript.png" width="30px" style="margin-right:10px" />
-            <h3>Typescript</h3>
+            <h3>TypeScript</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <img src="assets/img/icons/nextjs.svg" width="30px" style="margin-right:10px" />
+            <h3>Next.js</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <img src="assets/img/icons/postgresql.svg" width="30px" style="margin-right:10px" />
+            <h3>PostgreSQL</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <img src="assets/img/icons/java.png" width="30px" style="margin-right:10px" />
+            <h3>Java</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <img src="assets/img/icons/express.png" width="30px" style="margin-right:10px" />
+            <h3>Express</h3>
           </div>
         </div>
 
@@ -206,7 +238,7 @@
             <h4>B.Tech Bachelor of Technology </h4>
             <h5>2020 - 2024</h5>
             <p><em>Gujarat Technology University </em>Ahmedabad Institute of Technolgy college</p>
-            <p><i>CPI :- 8.19 / 10</i></p>
+            <p><i>CGPA :- 8.19 / 10</i></p>
           </div>
           <h3 class="resume-title">Achievements</h3>
           <div class="resume-item pb-0">
@@ -409,6 +441,21 @@
   <script>
     const age = new Date().getFullYear() - 2002;
     document.querySelector(`span[class="age"]`).textContent = age;
+  </script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    let typedD = new Typed(".auto-typing_d", {
+      strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    })
+    let typedM = new Typed(".auto-typing_m", {
+      strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    })
   </script>
 </body>
 

@@ -18,13 +18,16 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: url("../img/bg.png");
-  background-size: cover;
+  background: url('../img/rear-view-programmer-working-all-night-long.jpg');
+  background-size: 100% 120%;
   left: 0;
   right: 0;
   top: 0;
   height: 100vh;
   z-index: -1;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media (min-width: 1024px) {
   body::before {
@@ -33,7 +36,7 @@ body::before {
 }
 
 a {
-  color: #18d26e;
+  color: #18D26E;
   text-decoration: none;
   user-select: none;
 }
@@ -56,10 +59,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.61);
 }
 
 #header * {
@@ -78,6 +82,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   display: inline-block;
 } */
+#header .intro_mobile{
+  display: none;
+}
+#header img[class="intro_mobile"]{
+  display: none;
+}
+
+#header a{
+  color: white;
+}
+
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
@@ -86,9 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
-  padding-bottom: 6px;
-  padding: 6px;
-  background-color: rgba(0, 0, 0, 0.596);
+  padding: 0px 0 6px 0px;
+  color: aqua;
+  /* background-color: rgba(0, 0, 0, 0.596); */
 }
 #header img {
   padding: 0;
@@ -97,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 #header .social-links {
   margin-top: 40px;
   display: flex;
+  gap: 10px;
 }
 #header .social-links a {
   font-size: 16px;
@@ -112,6 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 @media (min-width: 768px) {  
+
   #header .social-links a:hover {
     background: #18d26e;
   }
@@ -188,10 +205,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 52px;
   }
   #header h2 span{
-    padding: 6px 5px 6px 5px;
+    padding: 0px 0px 6px 0px;
     background-color: transparent;
     /* padding: 6px; */
-    background-color: rgba(0, 0, 0, 0.596);
+    /* background-color: rgba(0, 0, 0, 0.596); */
   }
   #header .social-links {
     margin-top: 15px;
@@ -227,6 +244,31 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 @media (max-width: 768px) {
+  #header .intro_mobile{
+    display: block;
+    text-align: center;
+  }
+  #header img[class="intro_mobile"]{
+    display: block;
+  }
+  #header h1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #header img[class="intro_mobile"]{
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  body::before{
+    background: none;
+    background-color: black;
+  }
+  #header .intro_desktop{
+    display: none;
+  }
   #header.header-top {
     height: 60px;
   }
@@ -965,7 +1007,7 @@ section .container {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  margin: 0px 0 8px 68px;
+  margin: 0px 0 0px 68px;
 }
 .contact .info-box p {
   padding: 0;
