@@ -18,7 +18,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: url('../img/rear-view-programmer-working-all-night-long.jpg');
+  background: url('../img/bg.jpg');
   background-size: 100% 120%;
   left: 0;
   right: 0;
