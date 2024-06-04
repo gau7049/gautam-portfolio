@@ -38,6 +38,10 @@
   <!-- <div class="cursor"></div>
         <div class="cursor-front"></div> -->
   <!-- ======= Header ======= -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <h5>Gautam - Portfolio</h5>
+  </div>
   <header id="header">
     <div class="container">
       <h1>
@@ -420,9 +424,6 @@
   </section><!-- End Contact Section -->
 
 
-<!--Blog section-->
-
-
 
 <!--End Blog section-->
 
@@ -438,24 +439,31 @@
   <script src="https://kit.fontawesome.com/450a8dfd72.js" crossorigin="anonymous"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    const age = new Date().getFullYear() - 2002;
-    document.querySelector(`span[class="age"]`).textContent = age;
-  </script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
-    let typedD = new Typed(".auto-typing_d", {
-      strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true
-    })
-    let typedM = new Typed(".auto-typing_m", {
-      strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true
-    })
+    
+    const age = new Date().getFullYear() - 2002;
+    document.querySelector(`span[class="age"]`).textContent = age;
+    
+    window.addEventListener('load', function() {
+      // Hide the preloader
+      setTimeout(() => {
+        document.getElementById('preloader').style.display = 'none';
+        let typedD = new Typed(".auto-typing_d", {
+          strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
+          typeSpeed: 50,
+          backSpeed: 50,
+          loop: true
+        })
+        let typedM = new Typed(".auto-typing_m", {
+          strings: ["Full Stack Developer", "Software Developer", "MERN Stack Developer", "Frontend Developer"],
+          typeSpeed: 50,
+          backSpeed: 50,
+          loop: true
+        })
+    }, 2000)
+
+});
   </script>
 </body>
 
