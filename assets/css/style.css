@@ -18,8 +18,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: url('../img/bg.jpg');
-  background-size: 100% 120%;
+  /* background: url('../img/bg.jpg'); */
+  /* background-size: 100% 120%; */
   left: 0;
   right: 0;
   top: 0;
@@ -28,6 +28,7 @@ body::before {
   background-position: top center;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: black;
 }
 @media (min-width: 1024px) {
   body::before {
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   z-index: 997;
   overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.61);
+  background-color: black;
 }
 
 #header * {
