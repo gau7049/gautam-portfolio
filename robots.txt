@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gau7049.github.io/sitemap.xml
