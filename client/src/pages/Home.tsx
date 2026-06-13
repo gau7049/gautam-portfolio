@@ -3,6 +3,10 @@ import { Card } from "@/components/ui/card";
 import { Mail, Github, Linkedin, ExternalLink, ArrowRight, Code2, Zap, Users, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { FloatingCharacter } from "@/components/FloatingCharacter";
+import { ScrollTimeline } from "@/components/ScrollTimeline";
+import { ParticleBackground } from "@/components/ParticleBackground";
 
 /**
  * Design Philosophy: Premium SaaS Product Engineering
@@ -16,6 +20,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +58,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      <ParticleBackground />
+      <ScrollTimeline />
+      <FloatingCharacter state="idle" />
       {/* Header */}
+      {!isLoading && (
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
@@ -90,6 +100,7 @@ export default function Home() {
           </button>
         </div>
       </header>
+      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
